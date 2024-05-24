@@ -14,5 +14,7 @@ public class App {
         System.out.println("Mean of the array is " + Mean.AvG(arr1));
         System.out.println("Mean of the second array is " + Mean.AvG(arr2));
 
+        System.out.println("Geometric mean of the array is "+GeometricMean.Gmean(arr1));
+
     }
 }
