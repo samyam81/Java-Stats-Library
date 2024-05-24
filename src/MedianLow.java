@@ -4,13 +4,13 @@ public class MedianLow {
             throw new IllegalArgumentException("Array cannot be null or empty.");
         }
 
-        int[] arr = new int[numbers.length];
+        Integer[] arr = new Integer[numbers.length];
         for (int i = 0; i < numbers.length; i++) {
             arr[i] = numbers[i].intValue();
         }
 
         // Use Sorting class to sort the array
-        new Sorting(arr);
+        new Sorting<>(arr);
 
         int length = arr.length;
         if (length % 2 == 1)  // Odd number of elements

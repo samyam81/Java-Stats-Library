@@ -1,5 +1,13 @@
-public class GeometricMean {
-    public static <T extends Number> double Gmean(T[] numbers) {
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class GeometricMean<T extends Number> {
+
+    private double Gm;
+
+    public void Gmean(T[] numbers) {
         if (numbers == null || numbers.length == 0) {
             throw new IllegalArgumentException("Array must not be null or empty.");
         }
@@ -9,6 +17,6 @@ public class GeometricMean {
             product *= num.doubleValue();
         }
 
-        return Math.pow(product, 1.0 / numbers.length);
+        this.Gm = Math.pow(product, 1.0 / numbers.length);
     }
 }

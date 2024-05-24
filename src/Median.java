@@ -1,18 +1,23 @@
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
+public class Median<T extends Number & Comparable<T>> {
 
-public class Median {
+    private double Md;
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     
-    public static double Mid(int[] arr){
+    public void Mid(T[] arr) {
         new Sorting(arr);
         int n = arr.length;
-        if (n % 2 != 0) 
-            return arr[n / 2];
+        if (n % 2 != 0)
+            this.Md = arr[n / 2].doubleValue();
         else {
             int mid1 = n / 2 - 1;
             int mid2 = n / 2;
-            return (arr[mid1] + arr[mid2]) / 2.0;
+            this.Md = (arr[mid1].doubleValue() + arr[mid2].doubleValue()) / 2.0;
         }
     }
 }

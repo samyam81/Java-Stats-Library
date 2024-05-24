@@ -1,5 +1,12 @@
-public class HarmonicMean {
-    public static <T extends Number> double Hmean(T[] numbers) {
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
+public class HarmonicMean <T extends Number> {
+    private double Hm;
+    public void Hmean(T[] numbers) {
         if (numbers == null || numbers.length == 0) {
             throw new IllegalArgumentException("Array cannot be null or empty.");
         }
@@ -13,6 +20,6 @@ public class HarmonicMean {
             reciprocalSum += 1 / value;
         }
 
-        return numbers.length / reciprocalSum;
+        this.Hm=numbers.length / reciprocalSum;
     }
 }
