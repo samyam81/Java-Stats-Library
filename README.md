@@ -53,10 +53,6 @@ public class Main {
 - Flexibility: Utilizes generics for flexibility, allowing developers to work with different types of numerical data.
 - Lombok Integration: Seamless integration with Lombok for reducing boilerplate code and improving code readability.
 
-## Troubleshooting
-
-If you encounter any issues or have questions about Java-Stats-Library, please check the [GitHub repository](https://github.com/example/java-stats-library) for existing issues or open a new one for assistance.
-
 ## Dependencies
 
 Java-Stats-Library has the following dependencies:
