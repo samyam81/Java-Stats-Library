@@ -53,6 +53,22 @@ public class Main {
 - Flexibility: Utilizes generics for flexibility, allowing developers to work with different types of numerical data.
 - Lombok Integration: Seamless integration with Lombok for reducing boilerplate code and improving code readability.
 
+## File Structure
+
+- "Correlation.java": Defines a generic class `Correlation` with a method `calculateCorrelation` to compute the correlation coefficient between two arrays of numbers, utilizing covariance and variances calculations, and Lombok annotations for getter and setter methods.
+- "Covariance.java": Defines a generic class `Covariance` with a method `calculateCovariance` to compute the covariance between two arrays of numbers, utilizing mean calculations and Lombok annotations for getter and setter methods.
+- "GeometricMean.java": Defines a generic class `GeometricMean` with a method `calculateGeometricMean` to compute the geometric mean of an array of numbers, utilizing Lombok annotations for getter and setter methods.
+- "HarmonicMean.java": Defines a generic class `HarmonicMean` with a method `calculateHarmonicMean` to compute the harmonic mean of an array of numbers, utilizing Lombok annotations for getter and setter methods.
+- "LinearRegression.java": Defines a generic class `LinearRegression` with a method `fit` to perform linear regression on two arrays of numbers, computing the slope and intercept of the regression line, utilizing Lombok annotations for getter and setter methods.
+- "Mean.java": Defines a generic class `Mean` with a method `calculateMean` to compute the mean of an array of numbers, utilizing Lombok annotations for getter and setter methods, and a constructor to specify the type of numbers to be processed.
+- "Median.java": Defines a generic class `Median` with a method `findMedian` to compute the median of an array of numbers, utilizing Lombok annotations for getter and setter methods, and sorting the array to find the median efficiently.
+- "MedianHigh.java": Defines a generic class `MedianHigh` with a method `findMedianHigh` to compute the median of an array of numbers, considering the high value for the median in case of an even number of elements, utilizing Lombok annotations for getter and setter methods, and sorting the array to efficiently find the median.
+- "MedianLow.java": Defines a generic class `MedianLow` with a method `findMedianLow` to compute the median of an array of numbers, considering the low value for the median in case of an even number of elements, utilizing Lombok annotations for getter and setter methods, and sorting the array to efficiently find the median.
+- "Mode.java": Defines a generic class `Mode` with a method `calculateMode` to compute the mode (most frequently occurring value) of an array of numbers, utilizing Lombok annotations for getter and setter methods, and a HashMap to store the frequency of each element.
+- "Multimode.java": Defines a generic class `Multimode` with a method `calculateMultimode` to compute the multimode (values that occur most frequently) of an array of numbers, utilizing Lombok annotations for getter and setter methods, and a HashMap to store the frequency of each element.
+- "Quantiles.java": Defines a generic class `Quantiles` with a method `getQuantiles` to compute the quantiles (values that divide a dataset into equally sized intervals) of an array of numbers, utilizing Lombok annotations for getter and setter methods, and sorting the array to efficiently find the quantiles.
+- "Sorting.java": This Java class provides generic implementations of two sorting algorithms: insertion sort and quick sort. The constructor determines which algorithm to use based on the size of the input array, and the class provides private methods for sorting and partitioning.
+
 ## Dependencies
 
 Java-Stats-Library has the following dependencies:
