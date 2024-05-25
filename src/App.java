@@ -10,6 +10,7 @@ public class App {
         Double[] arr2 = { 1.0, 2.5, 3.5, 4.0, 5.5 };
 
         new Sorting<>(arr);
+        new Sorting<>(arr1);
 
         System.out.println(Arrays.toString(arr));
 
@@ -35,19 +36,25 @@ public class App {
 
         MedianLow<Double> LowMedian=new MedianLow<>();
         LowMedian.Low(arr2);
-        System.out.println("Low Median of the array: " + (int)LowMedian.getML());
+        System.out.println("Low Median of the array: " + LowMedian.getML());
 
 
         MedianHigh<Double> HighMedian=new MedianHigh<>();
         HighMedian.High(arr2);
-        System.out.println("High Median of the array: " + (int) HighMedian.getMH());
+        System.out.println("High Median of the array: " + HighMedian.getMH());
 
 
         Integer[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 3, 4, 5, 5 };
         
         Mode<Integer> modeCalculator = new Mode<>();
         modeCalculator.calculateMode(numbers);
-
         System.out.println("Mode: " + modeCalculator.getMode());
+
+        Multimode<Integer> MultimodeCalculator=new Multimode<>();
+        MultimodeCalculator.CalculateMultimode(numbers);
+        System.out.println("Multimode: "+MultimodeCalculator.getMultimodes());
+        
+        // MultimodeCalculator.CalculateMultimode(arr1);
+        // System.out.println("Multimode: " + MultimodeCalculator.getMultimodes());
     }
 }
