@@ -33,9 +33,15 @@ public class App {
 
         System.out.println("Harmonic mean of the array is " + harmonicMean.getHm());
 
-        System.out.println("Low Median of the array: " + (int) MedianLow.Low(arr1));
+        MedianLow<Double> LowMedian=new MedianLow<>();
+        LowMedian.Low(arr2);
+        System.out.println("Low Median of the array: " + (int)LowMedian.getML());
 
-        System.out.println("High Median of the array: " + (int) MedianHigh.High(arr1));
+
+        MedianHigh<Double> HighMedian=new MedianHigh<>();
+        HighMedian.High(arr2);
+        System.out.println("High Median of the array: " + (int) HighMedian.getMH());
+
 
         Integer[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 3, 4, 5, 5 };
         
