@@ -3,17 +3,27 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Mean<T extends Number> {
+public class Mean<T extends Number & Comparable<T>> {
 
-    private double mean;
+    private T mean;
 
-    public void calculateMean(T[] numbers) {
+    private final Class<T> clazz;
+
+    public Mean(Class<T> clazz) {
+        this.clazz = clazz;
+    }
+
+    public void calculateMean(Number[] numbers) {
         double sum = 0.0;
-        for (T num : numbers) {
+        for (Number num : numbers) {
             sum += num.doubleValue(); // Extract the double value from the Number object
         }
-        double AvG=sum / numbers.length;
+        double AvG = sum / numbers.length;
 
-        this.mean=AvG;
+        try {
+            this.mean = clazz.getDeclaredConstructor(double.class).newInstance(AvG);
+        } catch (Exception e) {
+            e.printStackTrace(); // Handle the exception properly in your code
+        }
     }
 }
